@@ -1,0 +1,39 @@
+body {
+  background-color: deepskyblue ;
+}
+
+.navBar {
+  background-color: cornflowerblue;
+}
+
+.font_white {
+  color: white;
+}
+
+.link_tabs {
+  font-family: Kaushan Script;
+  color: salmon;
+}
+
+.btn_selection {
+  padding: 1rem;
+}
+
+#card1 {
+  width: 200px;
+  background: white;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 40px -20px rgba(0,0,0,.4);
+  display: flex;
+}
+
+.card_print {
+  padding: 10px;
+  display: flex;
+}
+
+.mar_10 {
+  margin: 10px;
+}
