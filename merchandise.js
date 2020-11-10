@@ -55,42 +55,148 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint
 };
 
-const merchPrinter = (MerchandiseArray) => {
-let domString = '';
-for (i = 0; i < Merchandisearray.length; i++) { 
-domString += 
-<div class= "card" style="width: 18rem">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class= "card-body">
-        <h5 class= "card-title">${MerchandiseArray[i].name}</h5>
-        <p class= "card-text">${MerchandiseArray[i].price}</p>
-        <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
-    </div>
-</div>
-
-for (let i = 0; i <Merchandisearray.length; i++) { 
-  domString += `<h1>${arrayOfStudents[i].all}</h1>`;
-  domString += `<h1>${arrayOfStudents[i].apparel}</h1>`;
-  domString += `<h1>${arrayOfStudents[i].media}</h1>`;
-  domString += `<h1>${arrayOfStudents[i].tourmerchandise}</h1>`;
-  domString += `<h1>${arrayOfStudents[i].CollectorMerchandise}</h1>`;
-  domString += `<h1>${arrayOfStudents[i].EVHome}</h1>`;
-}
-
-for (let i = 0; i <MerchandiseArray.length; i++) { 
-        merchPrinter(MerchandiseArray)
-    };
-    
-    const Apparel = MerchandiseArray.filter(item => item.type === 'apparel')
-    const Media = MerchandiseArray.filter(item => item.type === 'media')
-    const tourMerchandise =MerchandiseArray.filter(item => item.type === 'tourmerchandise')
-    const CollectorMerchandise = MerchandiseArray.filter(item => item.type === 'CollectorMerchandise')
-    const EVHome = MerchandiseArray.filter(item => item.type === 'EVHome')
-    const All = MerchandiseArray.filter(item => item.type === 'apparel' || 'media' || 'tourmerchandise' || 'CollectorMerchandise' || 'EVHome'
-
-
-    const printMerchandise = () => {
-        document.getElementById("merchCards").innerHTML = MerchandiseArray.innerHTML = 
-        Apparel.map(function (apparel) {
-            return `
-        }
+const merchPrinter = (merchandiseArray) => {
+    let domString = '';
+    for (let i = 0; i < merchandiseArray.length; i++) { 
+      domString += `
+      <div class= "card_print">
+        <div class= "card" style="width: 18rem;">
+          <img class="card-img-top" src="${merchandiseArray[i].image}" alt="Card image cap">
+          <div class= "card-body">
+            <h5 class= "card-title">${merchandiseArray[i].object}</h5>
+            <p class= "card-text">${merchandiseArray[i].description} ,${merchandiseArray[i].price}</p>
+            <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
+          </div>
+        </div>
+      </div>
+    `} 
+    printToDom('allInfo', domString)
+  }
+  
+  const init = () => {
+  merchPrinter(merchandiseArray)
+  };
+  
+  init();
+  
+  const apparel_sort = merchandiseArray.filter(item => item.type === 'apparel')
+  const media_sort = merchandiseArray.filter(item => item.type === 'media')
+  const tourmerchandise_sort = merchandiseArray.filter(item => item.type === 'tourMerchandise')
+  const CollectorMerchandise_sort = merchandiseArray.filter(item => item.type === 'CollectorMerchandise')
+  const EVHome_sort = merchandiseArray.filter(item => item.type === 'EVHome')
+  const All_sort = merchandiseArray.filter(item => item.type === 'apparel' || 'media' || 'tourMerchandise' || 'CollectorMerchandise' || 'EVHome')
+  
+  const Apparel_p = () => {
+    document.getElementById("allInfo").innerHTML = merchandiseArray.innerHTML = 
+        apparel_sort.map(function (apparel) {
+          return `   
+      <div class= "card" style="width: 18rem;">
+        <img class="card-img-top" src="${apparel.image}" alt="Card image cap">
+        <div class= "card-body">
+          <h5 class= "card-title">${apparel.object}</h5>
+          <p class= "card-text">${apparel.description} ,${apparel.price}</p>
+          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
+        </div>
+      </div>
+      
+      `;
+        }).join(''); 
+  }    
+  
+  const Media_p = () => {
+    document.getElementById("allInfo").innerHTML = merchandiseArray.innerHTML = 
+    Media_sort.map(function (media) {
+          return `   
+      <div class= "card" style="width: 18rem;">
+        <img class="card-img-top" src="${media.image}" alt="Card image cap">
+        <div class= "card-body">
+          <h5 class= "card-title">${media.object}</h5>
+          <p class= "card-text">${media.description} ,${media.price}</p>
+          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
+        </div>
+      </div>
+      
+      `;
+        }).join(''); 
+  } 
+  
+  const TourMechandise_p = () => {
+    document.getElementById("allInfo").innerHTML = merchandiseArray.innerHTML = 
+    TourMerchandise_sort.map(function (tourMechandise) {
+          return `   
+      <div class= "card" style="width: 18rem;">
+        <img class="card-img-top" src="${tourMechandise.image}" alt="Card image cap">
+        <div class= "card-body">
+          <h5 class= "card-title">${tourMechandise.object}</h5>
+          <p class= "card-text">${tourMechandise.description} ,${tourMechandise.price}</p>
+          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
+        </div>
+      </div>
+      
+      `;
+        }).join(''); 
+  }
+  
+  const CollectorMerchandise_p = () => {
+    document.getElementById("allInfo").innerHTML = merchandiseArray.innerHTML = 
+    CollectorMerchandise_sort.map(function (CollectorMerchandise) {
+          return `   
+      <div class= "card" style="width: 18rem;">
+        <img class="card-img-top" src="${CollectorMerchandise.image}" alt="Card image cap">
+        <div class= "card-body">
+          <h5 class= "card-title">${CollectorMerchandise.object}</h5>
+          <p class= "card-text">${CollectorMerchandise.description} ,${CollectorMerchandise.price}</p>
+          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
+        </div>
+      </div>
+      
+      `;
+        }).join(''); 
+  }
+  
+  const EVHome_p = () => {
+    document.getElementById("allInfo").innerHTML = merchandiseArray.innerHTML = 
+    EVHome_sort.map(function (EVHome) {
+          return `   
+      <div class= "card" style="width: 18rem;">
+        <img class="card-img-top" src="${EVHome.image}" alt="Card image cap">
+        <div class= "card-body">
+          <h5 class= "card-title">${EVHome.object}</h5>
+          <p class= "card-text">${EVHome.description} ,${EVHome.price}</p>
+          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
+        </div>
+      </div>
+      
+      `;
+        }).join(''); 
+  }
+  
+  const All_p = () => {
+    document.getElementById("allInfo").innerHTML = merchandiseArray.innerHTML = 
+    All_sort.map(function (all) {
+          return `   
+      <div class= "card" style="width: 18rem;">
+        <img class="card-img-top" src="${all.image}" alt="Card image cap">
+        <div class= "card-body">
+          <h5 class= "card-title">${all.object}</h5>
+          <p class= "card-text">${all.description} ,${all.price}</p>
+          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn-primary button--1">Purchase</button>
+        </div>
+      </div>
+      
+      `;
+        }).join(''); 
+  }
+  
+  const purchaseAlert = () => {
+    alert("Purchase successful!")
+  }
+  
+  
+  document.getElementById('apparel').addEventListener('click', Apparel_p);
+  document.getElementById('media').addEventListener('click', Media_p);
+  document.getElementById('tourMechandise').addEventListener('click', TourMechandise_p);
+  document.getElementById('EVHome').addEventListener('click', EVHome_p);
+  document.getElementById('CollectorMerchandise').addEventListener('click', CollectorMerchandise_p);
+  document.getElementById('all').addEventListener('click', All_p);
+  
