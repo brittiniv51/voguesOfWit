@@ -1,11 +1,5 @@
 
-.jumbotron {
-  background: url('Blue-background.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
+/* }
 .link_tabs {
   font-family: Kaushan Script;
   color: salmon;
@@ -33,4 +27,88 @@
 
 .font_title {
   font-size: 30px;
+} */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body,
+html {
+  background-color: #9A490B;
+  background-color: #363131;
+
+  /* background-color: #e29d30; */
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  /* margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin right: 5px; */
+}
+
+#formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#upcomingCardContainer, #pastCardContainer, #presaleCardContainer, #appearancesCardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  /* border: 10px solid rgb(71, 71, 71); */
+}
+
+.height{
+    height: 23rem
+    margin-top: 20px
+}
+
+#buttonGroup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+#upcomingButton, #pastButton, #presaleButton, #appearancesButton, #allButton {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#signupForm {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#ticketCards {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+img {
+  padding-right: 15px;
+  padding-left: 15px;
 }
