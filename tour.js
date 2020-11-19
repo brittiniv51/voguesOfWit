@@ -1,4 +1,3 @@
-
 // let ticketInfoArray = [
 //   {
 //     id: 0,
@@ -27,13 +26,12 @@
 //     city: 'Pittsburg,PA',
 //     venue: 'PPG Parcel Arena',
 //     price: 150,
-//   },  
+//   },
 //   ]
 //   let totalQty = 0;
 //   let totalCost = 0;
 //   let finalPrice =0;
 //   let total1 = 0;
- 
 
 //  const printToDom = (divId, textToPrint) => {
 //   const selectedDiv = document.getElementById(divId);
@@ -50,11 +48,11 @@
 //       domString += `<input type="number" class="col-1 " id =${ticketInfoArray[i].id} value=0 > `;
 //       domString += `<br>`;
 //      }
-     
+
 //      domString += `<button class="btn btn-light purchase_tab"  onclick="getQty()">Purchase</button>`;
 
 //     printToDom('allInfo', domString)
-    
+
 //     }
 //   studentPrinter(ticketInfoArray)
 
@@ -76,12 +74,10 @@
 //  alert("Thank You for purchasing your tickets for $" + finalPrice + "!")
 // }
 
-
-
 // upcoming, past, presale, appearances
 const ticketItems = [
   {
-    Date: "12/12/2020",
+    date: "12/12/2020",
     type: "Upcoming",
     image: "",
     location: "Nashville, Tennessee",
@@ -89,7 +85,7 @@ const ticketItems = [
   },
 
   {
-    Date: "12/24/2020",
+    date: "12/24/2020",
     type: "Upcoming",
     image: "",
     location: "New York, New York",
@@ -97,7 +93,7 @@ const ticketItems = [
   },
 
   {
-    Date: "1/12/2020",
+    date: "1/12/2020",
     type: "Past",
     image: "",
     location: "Denver, Colorado",
@@ -105,7 +101,7 @@ const ticketItems = [
   },
 
   {
-    Date: "4/2/2021",
+    date: "4/2/2021",
     type: "Presale",
     image: "",
     location: "Houston, Texas",
@@ -113,7 +109,7 @@ const ticketItems = [
   },
 
   {
-    Date: "7/18/2021",
+    date: "7/18/2021",
     type: "Presale",
     image: "",
     location: "Portland, Oregon",
@@ -121,7 +117,7 @@ const ticketItems = [
   },
 
   {
-    Date: "2/5/2021",
+    date: "2/5/2021",
     type: "Appearances",
     image: "",
     location: "Chicago, Illinois",
@@ -129,18 +125,11 @@ const ticketItems = [
   },
 ];
 
-// end of array
-
 // begin alert popup
-// let submit = document.getElementById("submit);
-// submit.addEventListener("click", function () {
-//   window.alert("you clicked");
-// });
+const purchaseAlert = () => {
+  alert("Your ticket has been purchased! See you there!");
+};
 // end alert popup
-
-// merchItems --- ticketItems
-// merchPrinter--ticketPrinter
-// merchCards -- ticketCards
 
 // dont understand this code
 
@@ -156,9 +145,10 @@ const ticketPrinter = (ticketItems) => {
     <div class="card">
       <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
         <div class="card-body">
-          <h5 class="card-title">${ticketItems[i].name}</h5>
+          <h5 class="card-title">${ticketItems[i].location}</h5>
           <p class="card-text">${ticketItems[i].price}</p>
-          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn btn-dark button--1">Purchase Ticket</button>
+          <p class="card-text">${ticketItems[i].date}</p>
+          <button onclick="purchaseAlert()" id="upcomingButton" class="btn purchase-btn-group btn btn-dark button--1">Purchase Tickets</button>
         </div>
     </div>
 `;
@@ -197,7 +187,7 @@ const printUpcoming = () => {
         <div class="card-body">
           <h5 class="card-title">${upcoming.location}</h5>
           <p class="card-text">${upcoming.price}</p>
-          <p class="card-text">${upcoming.Date}</p>
+          <p class="card-text">${upcoming.date}</p>
           <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn btn-dark button--1">Purchase Ticket</button>
         </div>
       </div>
@@ -207,19 +197,86 @@ const printUpcoming = () => {
 };
 // end upcoming cards
 
+// begin past cards
+const printPast = () => {
+  document.getElementById(
+    "ticketCards"
+  ).innerHTML = ticketItems.innerHTML = past
+    .map(function (past) {
+      return `
+    <div class="card">
+           <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
+        <div class="card-body">
+          <h5 class="card-title">${past.location}</h5>
+          <p class="card-text">${past.price}</p>
+          <p class="card-text">${past.date}</p>
+          <button id="pastButton" class="btn purchase-btn-group invisible">this should be invisible</button>
+        </div>
+      </div>
+`;
+    })
+    .join("");
+};
+// end past cards
+
+// begin presale cards
+const printPresale = () => {
+  document.getElementById(
+    "ticketCards"
+  ).innerHTML = ticketItems.innerHTML = presale
+    .map(function (presale) {
+      return `
+    <div class="card">
+           <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
+        <div class="card-body">
+          <h5 class="card-title">${presale.location}</h5>
+          <p class="card-text">${presale.price}</p>
+          <p class="card-text">${presale.date}</p>
+          <button onclick="purchaseAlert()" id="presaleButton" class="btn purchase-btn-group btn btn-dark button--1">Purchase Ticket</button>
+        </div>
+      </div>
+`;
+    })
+    .join("");
+};
+// end presale cards
+
+// begin appearances cards
+const printAppearances = () => {
+  document.getElementById(
+    "ticketCards"
+  ).innerHTML = ticketItems.innerHTML = appearances
+    .map(function (appearances) {
+      return `
+    <div class="card">
+           <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
+        <div class="card-body">
+          <h5 class="card-title">${appearances.location}</h5>
+          <p class="card-text">${appearances.price}</p>
+          <p class="card-text">${appearances.date}</p>
+          <button onclick="purchaseAlert()" id="appearancesButton" class="btn purchase-btn-group btn btn-dark button--1">Purchase Ticket</button>
+        </div>
+      </div>
+`;
+    })
+    .join("");
+};
+// end appearances cards
+
 // begin ALL cards
 const printAll = () => {
   document.getElementById(
     "ticketCards"
-  ).innerHTML = ticketItems.innerHTML = allOfEm
+  ).innerHTML = ticketItems.innerHTML = allCards
     .map(function (all) {
       return `
     <div class="card d-flex flex-wrap" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
         <div class="card-body">
           <h5 class="card-title">${all.location}</h5>
           <p class="card-text">${all.price}</p>
-          <button onclick="purchaseAlert()" id="btn-5" class="btn btn-primary purchase-btn-group button--5">Purchase</button>
+          <p class="card-text">${all.date}</p>
+          <button onclick="purchaseAlert()" id="allButton" class="btn btn-dark purchase-btn-group button--5">Purchase</button>
         </div>
     </div>
 `;
@@ -282,7 +339,3 @@ document.getElementById("allButton").addEventListener("click", printAll);
 
 //   }
 // });
-
-
-
- 
