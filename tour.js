@@ -1,86 +1,9 @@
-// let ticketInfoArray = [
-//   {
-//     id: 0,
-//     date: '6-19-21',
-//     city: 'St. Paul, MN',
-//     venue: 'Xcel Energy Center',
-//     price:150,
-//   },
-//   {
-//     id: 1,
-//     date: '6-21-21',
-//     city: 'Chicago, IL',
-//     venue: 'United Center',
-//     price: 150,
-//   },
-//   {
-//     id: 2,
-//     date: '6-24-21',
-//     city: 'Detroit,MI',
-//     venue: 'Little Caesar',
-//     price: 150,
-//   },
-//   {
-//     id: 3,
-//     date: '6-25-21',
-//     city: 'Pittsburg,PA',
-//     venue: 'PPG Parcel Arena',
-//     price: 150,
-//   },
-//   ]
-//   let totalQty = 0;
-//   let totalCost = 0;
-//   let finalPrice =0;
-//   let total1 = 0;
-
-//  const printToDom = (divId, textToPrint) => {
-//   const selectedDiv = document.getElementById(divId);
-//   selectedDiv.innerHTML = textToPrint
-//   };
-
-//   const studentPrinter = (ticketInfoArray) => {
-//     let domString = '';
-//     for (let i = 0; i < ticketInfoArray.length; i++) {
-//       domString += `<div class="col-2 ">${ticketInfoArray[i].date}</div>`
-//       domString += `<div class="col-3 ">${ticketInfoArray[i].city}</div>`
-//       domString += `<div class="col-4 ">${ticketInfoArray[i].venue}</div>`
-//       domString += `<div class="col-2 ">${ticketInfoArray[i].price}</div>`
-//       domString += `<input type="number" class="col-1 " id =${ticketInfoArray[i].id} value=0 > `;
-//       domString += `<br>`;
-//      }
-
-//      domString += `<button class="btn btn-light purchase_tab"  onclick="getQty()">Purchase</button>`;
-
-//     printToDom('allInfo', domString)
-
-//     }
-//   studentPrinter(ticketInfoArray)
-
-//   function getQty() {
-//     const value1 = parseFloat($("#0").val())
-//     const value2 = parseFloat($("#1").val())
-//     const value3 = parseFloat($("#2").val())
-//     const value4 = parseFloat($("#3").val())
-//     const totalQty = Number(value1) + Number(value2) + Number(value3) + Number(value4);
-//       finalPrice = totalQty * 150
-//       total_cost();
-//     }
-
-//   function total_cost () {
-//     console.log("new final",finalPrice);
-//   }
-
-// function cart_checkout () {
-//  alert("Thank You for purchasing your tickets for $" + finalPrice + "!")
-// }
-
-// upcoming, past, presale, appearances
 const ticketItems = [
   {
     date: "12/12/2020",
     type: "Upcoming",
     image: "",
-    location: "Nashville, Tennessee",
+    location: "Nashville, TN",
     price: "$50.00",
   },
 
@@ -88,7 +11,7 @@ const ticketItems = [
     date: "12/24/2020",
     type: "Upcoming",
     image: "",
-    location: "New York, New York",
+    location: "New York, NY",
     price: "$70.00",
   },
 
@@ -96,7 +19,7 @@ const ticketItems = [
     date: "1/12/2020",
     type: "Past",
     image: "",
-    location: "Denver, Colorado",
+    location: "Denver, CO",
     price: "$50.00",
   },
 
@@ -104,7 +27,7 @@ const ticketItems = [
     date: "4/2/2021",
     type: "Presale",
     image: "",
-    location: "Houston, Texas",
+    location: "Houston, TX",
     price: "$520.00",
   },
 
@@ -112,7 +35,7 @@ const ticketItems = [
     date: "7/18/2021",
     type: "Presale",
     image: "",
-    location: "Portland, Oregon",
+    location: "Portland, OR",
     price: "$100.00",
   },
 
@@ -120,7 +43,7 @@ const ticketItems = [
     date: "2/5/2021",
     type: "Appearances",
     image: "",
-    location: "Chicago, Illinois",
+    location: "Chicago, IL",
     price: "$300.00",
   },
 ];
@@ -182,15 +105,15 @@ const printUpcoming = () => {
   ).innerHTML = ticketItems.innerHTML = upcoming
     .map(function (upcoming) {
       return `
-    <div class="card">
-           <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
-        <div class="card-body">
-          <h5 class="card-title">${upcoming.location}</h5>
-          <p class="card-text">${upcoming.price}</p>
-          <p class="card-text">${upcoming.date}</p>
-          <button onclick="purchaseAlert()" id="btn-1" class="btn purchase-btn-group btn btn-dark button--1">Purchase Ticket</button>
-        </div>
-      </div>
+      <div class="card d-flex flex-wrap" style="width: 14rem;">
+      <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
+   <div class="card-body">
+     <h5 class="card-title">${upcoming.location}</h5>
+     <p class="card-text">${upcoming.price}</p>
+     <p class="card-text">${upcoming.date}</p>
+     <button onclick="purchaseAlert()" id="upcomingButton" class="btn purchase-btn-group btn btn-dark button--1">Purchase Ticket</button>
+   </div>
+ </div>
 `;
     })
     .join("");
@@ -204,8 +127,8 @@ const printPast = () => {
   ).innerHTML = ticketItems.innerHTML = past
     .map(function (past) {
       return `
-    <div class="card">
-           <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
+      <div class="card d-flex flex-wrap" style="width: 14rem;">
+      <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
         <div class="card-body">
           <h5 class="card-title">${past.location}</h5>
           <p class="card-text">${past.price}</p>
@@ -226,8 +149,8 @@ const printPresale = () => {
   ).innerHTML = ticketItems.innerHTML = presale
     .map(function (presale) {
       return `
-    <div class="card">
-           <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
+      <div class="card d-flex flex-wrap" style="width: 14rem;">
+      <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
         <div class="card-body">
           <h5 class="card-title">${presale.location}</h5>
           <p class="card-text">${presale.price}</p>
@@ -248,8 +171,8 @@ const printAppearances = () => {
   ).innerHTML = ticketItems.innerHTML = appearances
     .map(function (appearances) {
       return `
-    <div class="card">
-           <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
+      <div class="card d-flex flex-wrap" style="width: 14rem;">
+      <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
         <div class="card-body">
           <h5 class="card-title">${appearances.location}</h5>
           <p class="card-text">${appearances.price}</p>
@@ -270,7 +193,7 @@ const printAll = () => {
   ).innerHTML = ticketItems.innerHTML = allCards
     .map(function (all) {
       return `
-    <div class="card d-flex flex-wrap" style="width: 18rem;">
+    <div class="card d-flex flex-wrap" style="width: 14rem;">
       <img class="card-img-top" src="https://i.imgur.com/qP4LLTo.png" alt="">
         <div class="card-body">
           <h5 class="card-title">${all.location}</h5>
@@ -298,44 +221,3 @@ document
   .addEventListener("click", printAppearances);
 document.getElementById("allButton").addEventListener("click", printAll);
 // end buttons
-
-// upcoming
-// function myFunction() {
-//   const x = document.getElementById("pastCard");
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
-
-// const upcomingButton = document.getElementsById("upcomingButton");
-// upcomingButton.addEventListener("click", function () {
-//   const x = document.getElementsById("pastCard");
-//   if (x.style.display === "none") {
-//     x.style.display = "block";
-//   } else {
-//     x.style.display = "none";
-//   }
-// });
-
-// //search function
-// const adventureList = []
-//   const adventures = document.getElementsByClassName("card")
-//   for (let i = 0; i < adventures.length; i++) {
-//     let adventureName = adventures[i].innerHTML;
-//     adventureList.push(adventureName);
-
-//   }
-
-// let searchBar = document.getElementsById("search-bar")
-// searchBar.addEventListener("keyup", function(event){
-// let text = searchBar.value;
-// for (let i = 0; i < adventures.length; i++) {
-//   if (adventureList[i].indexOf(text) < 0) {
-//     adventures[i].style.display = "none"
-//   } else {
-//     adventures[i].style.display = "block"
-
-//   }
-// });
