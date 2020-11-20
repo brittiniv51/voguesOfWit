@@ -9,8 +9,6 @@
 
 body,
 html {
-  /* background-color: #9A490B;
-  background-color: #363131; */
   color: rgb(255, 255, 255);
   padding: 40px;
 }
@@ -89,6 +87,11 @@ img {
   /* height: 200px; */
 }
 
+button {
+  box-shadow: 2px 2px 4px #000000;
+}
+
+/* begin footer */
 #entireFooterContainer {
   background-color: rgb(22, 22, 22);
   color: white;
@@ -96,8 +99,16 @@ img {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 15px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 4px #000000;
 }
 
-/* .card-body {
-  height: 500px;
-} */
+.leftFooterContainer {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.rightFooterContainer {
+  margin-left: 10px;
+  margin-right: 10px;
+}
