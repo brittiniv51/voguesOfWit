@@ -13,6 +13,7 @@ html {
   padding: 40px;
 }
 
+
 .jumbotron {
   /* background-image: url("https://i.imgur.com/adGWYcx.jpg"); */
   background-image: url("https://i.imgur.com/IpEj4Ji.png");
@@ -135,6 +136,9 @@ button {
   object-fit: contain;
   text-align: center;
 }
+
+@import url("//use.fontawesome.com/releases/v5.6.1/css/all.css");
+
 
 /* below are media screens */
 
