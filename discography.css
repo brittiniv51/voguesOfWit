@@ -1,0 +1,51 @@
+body, html {
+    font-family: 'Lora', serif;
+    font-family: 'Merriweather', serif;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+  }
+
+.jumbotron {
+    background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  .btn btn-secondary {
+    background-color: #e29d30;
+  }
+
+  .col-md-12 text-center {
+  padding: 150px;
+  margin: 100px;
+}
+.btn btn-lg col-md-8 {
+  padding: 30px;
+  margin: 30px;
+}
+
+.card-header {
+  font-weight: bolder;
+  font-size: larger;
+  background:#e29d30;
+}
+.card-img-top {
+  width: 50px;
+  padding left: 20px;
+
+}
+.card-body {
+  color: black;
+}
+.card-deck {
+  padding: 20px;
+}
+
+.card-body {
+  align-items: center;
+  text-align: center;
+}
+

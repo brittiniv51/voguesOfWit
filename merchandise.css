@@ -1,39 +1,49 @@
-body {
-  background-color: deepskyblue ;
+
+body, html {
+  font-family: 'Lora', serif;
+  font-family: 'Merriweather', serif;
+  color: rgb(255, 255, 255);
+  padding: 40px;
 }
 
-.navBar {
-  background-color: cornflowerblue;
+.jumbotron {
+  background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
 }
 
 .font_white {
   color: white;
 }
 
-.link_tabs {
-  font-family: Kaushan Script;
-  color: salmon;
+.col-md-12 text-center {
+  padding: 150px;
+  margin: 100px;
+}
+.btn btn-lg col-md-8 {
+  padding: 30px;
+  margin: 30px;
 }
 
-.btn_selection {
-  padding: 1rem;
+.card d-flex flex-wrap {
+  padding: 30px;
+  align-items: center;
+  text-align: center;
 }
 
-#card1 {
-  width: 200px;
-  background: white;
-  border-radius: 10px;
-  margin: 20px;
-  overflow: hidden;
-  box-shadow: 0 5px 40px -20px rgba(0,0,0,.4);
+.card-body text-center{
+  text-align: center;
+  align-items: center;
+}
+
+.button {
+  margin: 50px;
+  padding: 20px;
   display: flex;
-}
-
-.card_print {
-  padding: 10px;
-  display: flex;
-}
-
-.mar_10 {
-  margin: 10px;
+  flex-direction: row;
+  justify-content: center;
+  border: 4px;
 }
