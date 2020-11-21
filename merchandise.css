@@ -2,15 +2,48 @@
 body, html {
   font-family: 'Lora', serif;
   font-family: 'Merriweather', serif;
+  color: rgb(255, 255, 255);
+  padding: 40px;
 }
 
-
+.jumbotron {
+  background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+}
 
 .font_white {
   color: white;
 }
 
-.link_tabs {
-  font-family: Kaushan Script;
-  color: salmon;
+.col-md-12 text-center {
+  padding: 150px;
+  margin: 100px;
+}
+.btn btn-lg col-md-8 {
+  padding: 30px;
+  margin: 30px;
+}
+
+.card d-flex flex-wrap {
+  padding: 30px;
+  align-items: center;
+  text-align: center;
+}
+
+.card-body text-center{
+  text-align: center;
+  align-items: center;
+}
+
+.button {
+  margin: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 4px;
 }
