@@ -1,5 +1,5 @@
 .jumbotron {
-    background: url('Blue-background.jpg') no-repeat center center fixed;
+    background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -9,6 +9,8 @@
   .font_white {
     color: white;
   }
+
+  
   .card {
     background: #f0f1ff;
     min-height: 400px;
