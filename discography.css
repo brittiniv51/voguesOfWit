@@ -7,36 +7,46 @@ body, html {
 
 .jumbotron {
     background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     color: white;
+    font-family: "Merriweather", serif;
     text-align: center;
   }
-  .btn btn-secondary {
-    background-color: #e29d30;
+
+#buttonGroup {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
   }
 
-  .col-md-12 text-center {
-  padding: 150px;
-  margin: 100px;
-}
-.btn btn-lg col-md-8 {
-  padding: 30px;
-  margin: 30px;
+#Studio-btn,
+#Comp-btn,
+#Single-btn,
+#All-btn {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .card-header {
-  font-weight: bolder;
+  font-weight: bold;
   font-size: larger;
   background:#e29d30;
 }
-.card-img-top {
-  width: 50px;
-  padding left: 20px;
 
+img {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 50px;
 }
+ button {
+   box-shadow: 2px 2px 4px #000000;
+ }
+ 
 .card-body {
   color: black;
 }

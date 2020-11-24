@@ -1,49 +1,71 @@
-
-body, html {
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: 'Lora', serif;
   font-family: 'Merriweather', serif;
-  color: rgb(255, 255, 255);
+}
+
+body, 
+html {
+  color: #114b94;
   padding: 40px;
 }
 
 .jumbotron {
   background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  color: white;
+  font-family: "Merriweather", serif;
   text-align: center;
+}
+
+#apparel-btn,
+#home-btn,
+#tourMerch-btn,
+#Collector-btn,
+#all-btn {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#buttonGroup {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .font_white {
   color: white;
 }
 
-.col-md-12 text-center {
-  padding: 150px;
-  margin: 100px;
-}
-.btn btn-lg col-md-8 {
-  padding: 30px;
-  margin: 30px;
-}
-
-.card d-flex flex-wrap {
-  padding: 30px;
-  align-items: center;
-  text-align: center;
-}
 
 .card-body text-center{
   text-align: center;
   align-items: center;
 }
 
-.button {
-  margin: 50px;
-  padding: 20px;
+#merchCards {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border: 4px;
+  align-items: center;
+  text-align: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+img {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 50px;
+}
+
+button {
+  box-shadow: 2px 2px 4px #000000;
 }
