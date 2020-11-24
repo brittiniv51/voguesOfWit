@@ -61,7 +61,7 @@ const merchPrinter = (merchItems) => {
     let domString = '';
     for (i = 0; i < merchItems.length; i++) { 
       domString += `
-          <div class="card">
+          <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="${merchItems[i].image}" alt="Card image cap">
               <div class="card-body">
                  <h5 class="card-title">${merchItems[i].title}</h5>

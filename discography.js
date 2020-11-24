@@ -86,7 +86,7 @@ const discPrinter = (discInfo) => {
         <div class="card-body">
           <h5 class="card-title">${discInfo[i].type}</h5>
           <p class="card-text">${discInfo[i].recordYear}</p>
-          <a href="https://www.amazon.com/Very-Best-En-Vogue/dp/B00005MLTN" target="_blank" class="btn btn-dark">Purchase Album</a>
+          <a href="https://www.amazon.com/s?k=envogue&i=popular&crid=1HJ1REDPA1OGB&sprefix=envo%2Cpopular%2C166&ref=nb_sb_ss_ts-a-p_2_4" target="_blank" class="btn btn-dark">Purchase Album</a>
           </div>
       </div>
     </div>
@@ -113,12 +113,12 @@ const printStudio = () => {
     return `
     <div class="card-deck">
     <div class="card d-flex flex-wrap" style="width: 14rem" id="albumCards">
-    <div class="card-header">${Compilation.album}</div>
+    <div class="card-header">${Studio.album}</div>
       <img class="card-img-top" style="width: 14rem;" src="https://i.imgur.com/vXhRd0Y.jpeg" alt="Picture of record on record player">
       <div class="card-body">
-        <h5 class="card-title">${Compilation.type}</h5>
-        <p class="card-text">${Compilation.recordYear}</p>
-        <a href="https://www.amazon.com/Very-Best-En-Vogue/dp/B00005MLTN" target="_blank" class="btn btn-dark">Purchase Album</a>
+        <h5 class="card-title">${Studio.type}</h5>
+        <p class="card-text">${Studio.recordYear}</p>
+        <a href="https://www.amazon.com/s?k=envogue&i=popular&crid=1HJ1REDPA1OGB&sprefix=envo%2Cpopular%2C166&ref=nb_sb_ss_ts-a-p_2_4" target="_blank" class="btn btn-dark">Purchase Album</a>
         </div>
     </div>
   </div>
@@ -131,12 +131,12 @@ const printComp = () => {
     return `
     <div class="card-deck">
     <div class="card d-flex flex-wrap" style="width: 14rem" id="albumCards">
-    <div class="card-header">${Studio.album}</div>
+    <div class="card-header">${Comp.album}</div>
       <img class="card-img-top" style="width: 14rem;" src="https://i.imgur.com/vXhRd0Y.jpeg" alt="Picture of record on record player">
       <div class="card-body">
-        <h5 class="card-title">${Studio.type}</h5>
-        <p class="card-text">${Studio.recordYear}</p>
-        <a href="https://www.amazon.com/Very-Best-En-Vogue/dp/B00005MLTN" target="_blank" class="btn btn-dark">Purchase Album</a>
+        <h5 class="card-title">${Comp.type}</h5>
+        <p class="card-text">${Comp.recordYear}</p>
+        <a href="https://www.amazon.com/s?k=envogue&i=popular&crid=1HJ1REDPA1OGB&sprefix=envo%2Cpopular%2C166&ref=nb_sb_ss_ts-a-p_2_4" target="_blank" class="btn btn-dark">Purchase Album</a>
         </div>
     </div>
   </div>
@@ -154,7 +154,7 @@ const printSingle = () => {
       <div class="card-body">
         <h5 class="card-title">${Single.type}</h5>
         <p class="card-text">${Single.recordYear}</p>
-        <a href="https://www.amazon.com/Very-Best-En-Vogue/dp/B00005MLTN" target="_blank" class="btn btn-black">Purchase Album</a>
+        <a href="https://www.amazon.com/s?k=envogue&i=popular&crid=1HJ1REDPA1OGB&sprefix=envo%2Cpopular%2C166&ref=nb_sb_ss_ts-a-p_2_4" target="_blank" class="btn btn-dark">Purchase Album</a>
         </div>
     </div>
   </div>
@@ -172,7 +172,7 @@ const printAll = () => {
       <div class="card-body">
         <h5 class="card-title">${all.type}</h5>
         <p class="card-text">${all.recordYear}</p>
-        <a href="https://www.amazon.com/Very-Best-En-Vogue/dp/B00005MLTN" target="_blank" class="btn btn-dark">Purchase Album</a>
+        <a href="https://www.amazon.com/s?k=envogue&i=popular&crid=1HJ1REDPA1OGB&sprefix=envo%2Cpopular%2C166&ref=nb_sb_ss_ts-a-p_2_4" target="_blank" class="btn btn-dark">Purchase Album</a>
         </div>
     </div>
   </div>
