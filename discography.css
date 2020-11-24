@@ -48,10 +48,23 @@ img {
  }
  
 .card-body {
+  border: 4px;
+  border-radius: 50%;
   color: black;
 }
+
 .card-deck {
   padding: 20px;
+
+}
+.card-header{
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-img-top{
+  align-items: center;
+  align-content: center;
 }
 
 .card-body {
