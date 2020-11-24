@@ -2,7 +2,7 @@ const merchItems = [
     
   {
         type: 'apparel',
-        title: 'Free Your Mind Tee',
+        title: 'FYM Tee',
         image:  'https://d1h6olfj08dopz.cloudfront.net/images/36731/v600_EnVoguq_FreeYourMind_Women_sWhite_T-Shirt_F.png',
         price:'  $23',
     },
@@ -28,13 +28,13 @@ const merchItems = [
     },
     {
       type: 'collectorMerch',
-      title: 'En Vogue Ornament',
+      title: 'EV Ornament',
         image: 'https://i.imgur.com/8MW3Psg.jpg',
         price:'  $9',
     },
     {
       type: 'collectorMerch',
-      title: 'En Vogue Stocking',
+      title: 'EV Stocking',
         image: 'https://i.imgur.com/7ZqThvS.jpg',
         price:'   $25',
     },
@@ -46,7 +46,7 @@ const merchItems = [
     },
     {
       type: 'tourMerch',
-      title: 'Free Your Mind DogTag',
+      title: 'FYM DogTag',
         image: 'https://i.imgur.com/2c608CR.jpg',
         price:'  $14',
     },
@@ -61,7 +61,7 @@ const merchPrinter = (merchItems) => {
     let domString = '';
     for (i = 0; i < merchItems.length; i++) { 
       domString += `
-          <div class="card d-flex flex-wrap" style="width: 14rem;">
+          <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="${merchItems[i].image}" alt="Card image cap">
               <div class="card-body">
                  <h5 class="card-title">${merchItems[i].title}</h5>
