@@ -7,45 +7,107 @@ body, html {
 
 .jumbotron {
     background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     color: white;
+    font-family: "Merriweather", serif;
     text-align: center;
   }
-  .btn btn-secondary {
-    background-color: #e29d30;
+
+#buttonGroup {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
   }
 
-  .col-md-12 text-center {
-  padding: 150px;
-  margin: 100px;
-}
-.btn btn-lg col-md-8 {
-  padding: 30px;
-  margin: 30px;
+#Studio-btn,
+#Comp-btn,
+#Single-btn,
+#All-btn {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .card-header {
-  font-weight: bolder;
+  font-weight: bold;
   font-size: larger;
   background:#e29d30;
 }
-.card-img-top {
-  width: 50px;
-  padding left: 20px;
 
+img {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 50px;
 }
+
+button,
+.btn btn-dark{
+   box-shadow: 2px 2px 4px #000000;
+ }
+ 
 .card-body {
+  border: 4px;
+  border-radius: 50%;
   color: black;
 }
+
 .card-deck {
   padding: 20px;
+
+}
+.card-header{
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-img-top{
+  align-items: center;
+  align-content: center;
 }
 
 .card-body {
   align-items: center;
   text-align: center;
+}
+
+/* begin footer */
+#entireFooterContainer {
+  background-color: rgb(22, 22, 22);
+  background-color: #000000;
+  background-image: linear-gradient(148deg, #000000 0%, #5E6477 100%);
+  color: white;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* max-width: 100%; */
+  /* grid-template-columns: auto auto auto; */
+  padding: 15px;
+  /* border-radius: 30px; */
+  /* box-shadow: 2px 2px 4px #000000; */
+}
+.leftFooterContainer {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* align-items: center;
+  justify-content: center; */
+  /* object-fit: contain; */
+}
+.rightFooterContainer {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* align-items: center;
+  justify-content: center; */
 }
 
