@@ -2,7 +2,7 @@
  
 You have been tasked with creating a webpage for the legendary R&B group En Vogue. 
 
-Your webpage must include a tour page, merchandise page, about page.
+Your webpage must include a tour page, merchandise page, index page.
 
 # Tour Page
 
@@ -19,7 +19,7 @@ Your webpage must include a tour page, merchandise page, about page.
 * As a user, I should be able to click on a button to see merchandise by group - (ex. If I click on a shirt button, all the shirts should display)
 * A way to purchase the merchandise
 
-# About Page
+# index Page
 
 * Include some great pictures of the band
 * Embed at least one video of your choice

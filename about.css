@@ -4,47 +4,41 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lora', serif;
-  font-family: 'Merriweather', serif;
+  font-family: "Lora", serif;
 }
 
-body, html {
-  font-family: 'Lora', serif;
-  font-family: 'Merriweather', serif;
+body,
+html {
+  color: #114b94;
+  padding: 40px;
 }
+
 
 .jumbotron {
-<<<<<<< Updated upstream
   background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  color: white;
+  font-family: "Merriweather", serif;
+  text-align: center;
 }
 
 .font_white {
   color: white;
 }
 /* .card {
-  background: #f0f1ff;
+  background: #F0F1FF;
   min-height: 400px;
   width: 300px;
   box-shadow: 0 2px 40px -20px rgba(O, 0, 0, .2)
 }   */
-
-
-
 .bio-container {
   display: flex;
   justify-content: center;
 }
-
-
 /* begin footer */
 #entireFooterContainer {
   background-color: rgb(22, 22, 22);
   background-color: #000000;
-  background-image: linear-gradient(148deg, #000000 0%, #5a5a5a 100%);
+  background-image: linear-gradient(148deg, #000000 0%, #5A5A5A 100%);
   color: white;
   margin-top: 50px;
   display: flex;
@@ -77,26 +71,3 @@ body, html {
   height: auto;
   width: auto;
 }
-=======
-    background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }
-
-  .font_white {
-    color: white;
-  }
-  /* .card {
-    background: #f0f1ff;
-    min-height: 400px;
-    width: 300px;
-    box-shadow: 0 2px 40px -20px rgba(O, 0, 0, .2)
-  }   */
-  
-  body, html {
-    font-family: 'Lora', serif;
-    font-family: 'Merriweather', serif;
-  }
->>>>>>> Stashed changes

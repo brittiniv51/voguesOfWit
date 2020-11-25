@@ -9,12 +9,11 @@
 }
 
 .jumbotron {
-    background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-  }
+  background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
+  color: white;
+  font-family: "Merriweather", serif;
+  text-align: center;
+}
   
   .font_white {
     color: white;

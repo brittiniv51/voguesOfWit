@@ -16,6 +16,8 @@ html {
 
 .jumbotron {
   background: url('https://i.imgur.com/adGWYcx.jpg') no-repeat center center fixed;
+  color: white;
+  font-family: "Merriweather", serif;
   text-align: center;
 }
 
